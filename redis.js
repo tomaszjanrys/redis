@@ -23,7 +23,7 @@ var employees = [
 
 for(let [key,value] of Object.entries(employees)){
     client.hmset(key,value, redis.print);
-    client.quit();
+    
 }
 
 client.hgetall("1",function(err,object){
